@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Banner Test</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="./../common/banner.css" type="text/css">
+        <script src="../vendor/jquery/jquery-2.1.1.min.js">/* jQuery v2.1.1 Copyright 2014 The jQuery Foundation */</script>
+        <script src="../scripts/banner.js"></script>
+    </head>
+    <body>
+        <p><a id="button_pause" href="javascript:void(0);">Pause</a> | <a id="button_unpause" href="javascript:void(0);">Unpause</a></p>
+        <div id="debug"></div>
+        <div id="banner_container">
+            <div id="banner_slider">
+                <div class="banner"><img src="../assets/test_banner_1.gif"></div>
+                <div class="banner"><img src="../assets/test_banner_2.gif"></div>
+                <div class="banner"><img src="../assets/test_banner_3.gif"></div>
+                <div class="banner"><img src="../assets/test_banner_4.gif"></div>
+                <div class="banner"><img src="../assets/test_banner_5.gif"></div>
+                <div class="clear"><!-- --></div>
+            </div>
+            <div id="banner_controls">
+                <div id="banner_control_1" class="banner_control"><a id="button_slide_1" class="button_slide" href="javascript:void(0);"></a></div>
+                <div id="banner_control_2" class="banner_control"><a id="button_slide_2" class="button_slide" href="javascript:void(0);"></a></div>
+                <div id="banner_control_3" class="banner_control"><a id="button_slide_3" class="button_slide" href="javascript:void(0);"></a></div>
+                <div id="banner_control_4" class="banner_control"><a id="button_slide_4" class="button_slide" href="javascript:void(0);"></a></div>
+                <div id="banner_control_5" class="banner_control"><a id="button_slide_5" class="button_slide" href="javascript:void(0);"></a></div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                hsr.banner.controls.begin();
+
+                $('a#button_slide_1').click(function() {
+                    hsr.banner.controls.selectSlide(1);
+                });
+                $('a#button_slide_2').click(function() {
+                    hsr.banner.controls.selectSlide(2);
+                });
+                $('a#button_slide_3').click(function() {
+                    hsr.banner.controls.selectSlide(3);
+                });
+                $('a#button_slide_4').click(function() {
+                    hsr.banner.controls.selectSlide(4);
+                });
+                $('a#button_slide_5').click(function() {
+                    hsr.banner.controls.selectSlide(5);
+                });
+                $('a#button_pause').click(function() {
+                    hsr.banner.controls.pause();
+                });
+                $('a#button_unpause').click(function() {
+                    hsr.banner.controls.unpause();
+                });
+            });
+        </script>
+    </body>
+</html>
